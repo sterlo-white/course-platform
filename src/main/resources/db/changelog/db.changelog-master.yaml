@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/001-create-course.yaml
+  - include:
+      file: db/changelog/002-create-chapter.yaml
+  - include:
+      file: db/changelog/003-create-lesson.yaml
+  - include:
+      file: db/changelog/004-add-description-to-lesson.yaml
+  - include:
+      file: db/changelog/005-insert-course-data.yaml
+

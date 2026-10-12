@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-add-description-to-lesson
+      author: bitlab
+      changes:
+        - addColumn:
+            tableName: lessons
+            columns:
+              - column:
+                  name: description
+                  type: TEXT

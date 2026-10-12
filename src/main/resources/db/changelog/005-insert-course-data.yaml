@@ -1,0 +1,468 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-insert-course
+      author: bitlab
+      changes:
+        - insert:
+            tableName: courses
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 1
+              - column:
+                  name: name
+                  value: "Java Developer"
+              - column:
+                  name: description
+                  value: "A comprehensive Java Developer course covering Java fundamentals, object-oriented programming, collections, exception handling, databases, Spring Framework, Spring Boot, REST APIs, validation, testing, and application development."
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+  - changeSet:
+      id: 006-insert-chapters
+      author: bitlab
+      changes:
+        - insert:
+            tableName: chapters
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 1
+              - column:
+                  name: name
+                  value: "Java Fundamentals"
+              - column:
+                  name: description
+                  value: "Introduction to Java syntax, variables, data types, conditional statements, loops, methods, and basic programming concepts."
+              - column:
+                  name: order
+                  valueNumeric: 1
+              - column:
+                  name: course_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: chapters
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 2
+              - column:
+                  name: name
+                  value: "Object-Oriented Programming"
+              - column:
+                  name: description
+                  value: "Core object-oriented programming principles including classes, objects, encapsulation, inheritance, abstraction, and polymorphism."
+              - column:
+                  name: order
+                  valueNumeric: 2
+              - column:
+                  name: course_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: chapters
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 3
+              - column:
+                  name: name
+                  value: "Java Collections Framework"
+              - column:
+                  name: description
+                  value: "Working with List, Set, Map, queues, iterators, generics, and common collection utilities."
+              - column:
+                  name: order
+                  valueNumeric: 3
+              - column:
+                  name: course_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: chapters
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 4
+              - column:
+                  name: name
+                  value: "Spring Boot Backend Development"
+              - column:
+                  name: description
+                  value: "Building production-ready backend applications using Spring Boot, REST APIs, Spring Data JPA, validation, exception handling, and testing."
+              - column:
+                  name: order
+                  valueNumeric: 4
+              - column:
+                  name: course_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+  - changeSet:
+      id: 007-insert-lessons
+      author: bitlab
+      changes:
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 1
+              - column:
+                  name: name
+                  value: "Variables and Data Types"
+              - column:
+                  name: description
+                  value: "Understanding variables and primitive and reference data types in Java."
+              - column:
+                  name: content
+                  value: "Java is a statically typed programming language, which means every variable has a declared type. Primitive types include byte, short, int, long, float, double, char, and boolean. Java also provides reference types such as String, arrays, and user-defined objects. A variable can be declared and initialized in a single statement, for example: int age = 25. Choosing an appropriate data type is important because it determines the values that can be stored and the operations that can be performed. The final keyword can be used when a variable should not be reassigned after initialization."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 1
+              - column:
+                  name: chapter_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 2
+              - column:
+                  name: name
+                  value: "If-Else Conditions"
+              - column:
+                  name: description
+                  value: "Learn how Java conditional statements are used to make decisions in application logic."
+              - column:
+                  name: content
+                  value: "Conditional statements allow a program to choose different execution paths depending on whether an expression evaluates to true or false. The if statement executes its body when its condition is true. The else statement provides an alternative path when the condition is false, while else-if branches can be used to evaluate several conditions. Java also provides switch statements for selecting one branch from multiple alternatives. Conditions are often built using relational operators such as greater than, less than, and equality, together with logical operators such as &&, ||, and !."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 2
+              - column:
+                  name: chapter_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 3
+              - column:
+                  name: name
+                  value: "Loops and Iteration"
+              - column:
+                  name: description
+                  value: "Learn how to repeat operations using for, while, and do-while loops."
+              - column:
+                  name: content
+                  value: "Loops are used when a program needs to execute a block of code repeatedly. Java provides for, while, and do-while loops. A for loop is useful when initialization, a condition, and an update operation can be expressed together. A while loop continues as long as its condition remains true. A do-while loop executes its body at least once because its condition is evaluated after the body. The break statement can terminate a loop early, while continue skips the remaining statements of the current iteration."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 3
+              - column:
+                  name: chapter_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 4
+              - column:
+                  name: name
+                  value: "Methods and Parameters"
+              - column:
+                  name: description
+                  value: "Learn how methods organize Java programs into reusable units of functionality."
+              - column:
+                  name: content
+                  value: "A method is a named block of code that performs a specific operation. Methods improve readability, reduce duplication, and allow complex programs to be divided into smaller responsibilities. A method can accept parameters and may return a value. The return type is specified before the method name. Java passes arguments by value, meaning a method receives a copy of the value supplied by the caller. Well-designed methods usually have a clear responsibility and meaningful names, making application code easier to understand and test."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 4
+              - column:
+                  name: chapter_id
+                  valueNumeric: 1
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 5
+              - column:
+                  name: name
+                  value: "Classes and Objects"
+              - column:
+                  name: description
+                  value: "Introduction to classes and objects as the fundamental building blocks of object-oriented applications."
+              - column:
+                  name: content
+                  value: "A class defines the structure and behavior of objects. It can contain fields representing state and methods representing behavior. An object is an instance of a class created using the new keyword. Constructors are used to initialize objects when they are created. Object-oriented programming encourages developers to model real-world or business concepts as objects with clear responsibilities. Separating state and behavior into well-designed classes helps large applications remain understandable and maintainable."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 1
+              - column:
+                  name: chapter_id
+                  valueNumeric: 2
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 6
+              - column:
+                  name: name
+                  value: "Encapsulation"
+              - column:
+                  name: description
+                  value: "Learn how encapsulation protects object state and controls access to internal data."
+              - column:
+                  name: content
+                  value: "Encapsulation is a fundamental principle of object-oriented programming. It means protecting an object's internal state and providing controlled ways to interact with that state. In Java, fields are commonly declared private while public methods provide access to required operations. This approach allows a class to validate input and preserve its internal invariants. Encapsulation also reduces coupling because other components do not need to know how an object stores its data internally."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 2
+              - column:
+                  name: chapter_id
+                  valueNumeric: 2
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 7
+              - column:
+                  name: name
+                  value: "Inheritance and Polymorphism"
+              - column:
+                  name: description
+                  value: "Understanding inheritance and polymorphism for designing reusable Java applications."
+              - column:
+                  name: content
+                  value: "Inheritance allows a class to reuse and extend functionality provided by another class. A subclass can inherit accessible behavior and add its own functionality. Polymorphism allows objects of different concrete classes to be treated through a common parent type or interface. Method overriding allows a subclass to provide its own implementation of inherited behavior. These concepts encourage developers to work with abstractions and make systems easier to extend without rewriting existing client code."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 3
+              - column:
+                  name: chapter_id
+                  valueNumeric: 2
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 8
+              - column:
+                  name: name
+                  value: "List, Set and Map"
+              - column:
+                  name: description
+                  value: "Learn the most commonly used collection interfaces in the Java Collections Framework."
+              - column:
+                  name: content
+                  value: "The Java Collections Framework provides standard interfaces and implementations for storing groups of objects. List implementations such as ArrayList maintain element order and allow duplicates. Set implementations such as HashSet represent collections of unique elements. Map implementations such as HashMap store associations between keys and values. Developers should choose a collection based on required behavior and expected performance. Generics provide compile-time type safety and help prevent invalid values from being added to collections."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 1
+              - column:
+                  name: chapter_id
+                  valueNumeric: 3
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 9
+              - column:
+                  name: name
+                  value: "Generics"
+              - column:
+                  name: description
+                  value: "Learn how generics provide type safety and reusable data structures in Java."
+              - column:
+                  name: content
+                  value: "Generics allow classes, interfaces, and methods to operate on different types while maintaining compile-time type safety. Instead of working with Object and performing explicit casts, developers can specify a type parameter such as T. Collections are one of the most common examples of generic programming in Java. Generic methods can also accept type parameters independently from the class in which they are declared. Generics improve readability and reduce runtime ClassCastException errors."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 2
+              - column:
+                  name: chapter_id
+                  valueNumeric: 3
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 10
+              - column:
+                  name: name
+                  value: "HashMap and Efficient Lookup"
+              - column:
+                  name: description
+                  value: "Understanding key-value storage and efficient lookup using HashMap."
+              - column:
+                  name: content
+                  value: "HashMap is a commonly used Map implementation that stores key-value pairs. It uses hashing to determine where entries should be stored and provides efficient average-time lookup for well-distributed hash codes. Keys should implement equals and hashCode consistently. When custom objects are used as keys, violating the equals and hashCode contract can cause unexpected lookup behavior. HashMap is useful when an application needs to associate one value with another through a unique key."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 3
+              - column:
+                  name: chapter_id
+                  valueNumeric: 3
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 11
+              - column:
+                  name: name
+                  value: "Spring Dependency Injection"
+              - column:
+                  name: description
+                  value: "Introduction to inversion of control and dependency injection in Spring applications."
+              - column:
+                  name: content
+                  value: "Dependency injection is one of the central concepts of the Spring Framework. Instead of creating required dependencies directly inside a class, an object receives those dependencies from an external container. Spring manages application components in an application context and resolves their dependencies. Constructor injection is generally preferred because it makes dependencies explicit and allows objects to be created in a valid state. Annotations such as @Service, @Repository, and @RestController allow Spring to discover application components."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 1
+              - column:
+                  name: chapter_id
+                  valueNumeric: 4
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"
+
+        - insert:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 12
+              - column:
+                  name: name
+                  value: "Building REST APIs with Spring Boot"
+              - column:
+                  name: description
+                  value: "Learn how to design REST endpoints using Spring Boot and Spring MVC."
+              - column:
+                  name: content
+                  value: "Spring Boot simplifies the development of web applications by providing automatic configuration and sensible defaults. REST controllers can expose resources through HTTP endpoints using annotations such as @GetMapping, @PostMapping, @PutMapping, and @DeleteMapping. Request data can be represented by DTO classes and validated using Jakarta Bean Validation. Business logic should remain inside service classes rather than controllers, while repositories are responsible for persistence. This separation creates a maintainable architecture consisting of controllers, services, mappers, repositories, and entities."
+              - column:
+                  name: lesson_order
+                  valueNumeric: 2
+              - column:
+                  name: chapter_id
+                  valueNumeric: 4
+              - column:
+                  name: created_time
+                  valueDate: "2026-01-01T10:00:00"
+              - column:
+                  name: updated_time
+                  valueDate: "2026-01-01T10:00:00"

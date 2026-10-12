@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-create-lesson
+      author: bitlab
+      changes:
+        - createTable:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: content
+                  type: TEXT
+
+              - column:
+                  name: lesson_order
+                  type: INT
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: chapter_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: created_time
+                  type: TIMESTAMP
+
+              - column:
+                  name: updated_time
+                  type: TIMESTAMP
+
+        - addForeignKeyConstraint:
+            baseTableName: lessons
+            baseColumnNames: chapter_id
+            referencedTableName: chapters
+            referencedColumnNames: id
+            constraintName: fk_lessons_chapter
+            onDelete: CASCADE
