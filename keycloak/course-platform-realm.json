@@ -1,0 +1,65 @@
+
+{
+  "realm": "course-platform",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "ADMIN"
+      },
+      {
+        "name": "TEACHER"
+      },
+      {
+        "name": "USER"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "ChangeMe_Admin_2026!",
+          "temporary": true
+        }
+      ],
+      "realmRoles": ["ADMIN"]
+    },
+    {
+      "username": "teacher",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "ChangeMe_Teacher_2026!",
+          "temporary": true
+        }
+      ],
+      "realmRoles": ["TEACHER"]
+    },
+    {
+      "username": "testuser",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "ChangeMe_User_2026!",
+          "temporary": true
+        }
+      ],
+      "realmRoles": ["USER"]
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "course-platform-client",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true
+    }
+  ]
+}
